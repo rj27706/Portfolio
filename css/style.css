@@ -1,0 +1,174 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+}
+header{
+    width: 100%;
+    top:0;
+    left:0;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    overflow-x: hidden;
+    z-index: 1;
+
+}
+main{
+    height: 100vh;
+    background-color: grey;
+    margin-top: 100vh;
+    z-index: 2;
+    position: relative;
+}
+header img{
+    position:absolute;
+    bottom:1%;
+    height:70vh;
+    left: -10%;
+    background-size: auto;
+    right:-4%;
+}
+
+header nav{
+    position: absolute;
+    right: 3%;
+    top: 4%;
+    font-size:3rem;
+    color: black;
+}
+header h1{
+    font-size: 4.5rem;
+    font-family: 'Gugi', cursive;
+    color: black;
+
+
+}
+header h3{
+    font-size: 2rem;
+    font-family: 'Gugi', cursive;
+    text-transform: uppercase;
+    color: black;
+
+}
+.hgroup{
+    position: absolute;
+    top: 19%;
+    left: 10%;
+    z-index: 2;
+}
+#arrow{
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    font-size: 2.4rem;
+    text-align: center;
+    text-shadow: 0 12px 0 black;
+    overflow: hidden;
+    width:40px;
+    height: 40px;
+    border:2px solid black;
+    transition: 1s;
+}
+#arrow:hover{
+    text-shadow: 0 13px 0 white;
+    color: white;
+    border-color: white;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.fa-chevron-down {
+    animation: arrow 2.3s infinite linear;
+}
+
+/*koniec header*/
+
+
+/*media queris*/
+@media (orientation: portrait) {
+    h1 span::after {
+        content: '\A';
+        white-space:pre;
+    }
+}
+
+@media (orientation: landscape) {
+  header img{
+      height:90vh;
+      left: 12%;
+  }
+}
+@media (min-width: 530px) {
+    header h1{
+        font-size: 3rem;
+    }
+    header h3{
+
+    }
+    header img{
+        height: 75%;
+    }
+
+}
+@media (min-width: 530px) and (orientation: portrait){
+    header img{
+        height: 50%;
+    }
+
+}
+@media (min-width: 768px){
+    header h1{
+        font-size: 2rem;
+    }
+    }
+
+@media (min-width: 768px) and (orientation: portrait){
+
+}
+@media (min-width: 1024px){
+
+}
+@media (min-width: 1024px) and (orientation: portrait){
+
+}
+@media (min-width: 1280px){
+
+}
+@media (min-width: 1600px){
+
+}
+@media (min-width: 1600px) and (orientation: portrait){
+
+}
+
+
+@media(max-width: 320px){
+    header h1 {
+        font-size: 3rem;
+    }
+    header h3 {
+        font-size: 1.1rem;
+    }
+    header img{
+        right :-10%
+    }
+
+}
+
+
+/*animacje*/
+@keyframes arrow{
+    0%{transform: translateY(-80px)
+    }
+    50%{transform: translateY(0px)
+    }
+    100%{transform: translateY(80px)
+    }
+
+}
